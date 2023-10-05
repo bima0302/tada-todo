@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { MdMenu, MdAccountCircle } from "react-icons/md";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { MdMenu, MdAccountCircle, MdEventNote } from "react-icons/md";
 
 export default function Home() {
   return (
@@ -18,7 +17,21 @@ export default function Home() {
           </div>
         </div>
         {/* body */}
-        <div className="bg-white h-screen">Body</div>
+        <div className="container">
+          {/* make input form to make new todo */}
+          <form class="rounded-lg bg-white p-10 shadow-lg">
+            <div class="mb-4 flex items-center">
+              <input
+                type="text"
+                class="w-full rounded-lg border border-gray-400 p-2"
+                placeholder="What needs to be done?"
+              />
+              <button class="ml-2 rounded-lg bg-blue-500 p-2 text-white hover:bg-blue-600">
+                <MdEventNote size={24} />
+              </button>
+            </div>
+          </form>
+        </div>
         {/* footer */}
         <div className="bg-gray-100 h-16 flex items-center justify-between sticky bottom-0">
           <div className="ml-4 mr-6">Footer</div>
