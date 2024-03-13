@@ -18,8 +18,8 @@ export const TodoWrapper = () => {
     ]);
   };
   return (
-    <>
-      <div className='bg-white'>
+    <div className=''>
+      <div className='max-w-sm mx-auto bg-white'>
         {/* header */}
         <Header />
         {/* body */}
@@ -28,6 +28,6 @@ export const TodoWrapper = () => {
         {/* footer */}
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
