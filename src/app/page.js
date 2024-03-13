@@ -29,10 +29,10 @@ export default function Home() {
           </div>
         </div>
         {/* body */}
-        <div className='container'>
+        <div className='container '>
           {/* make input form to make new todo */}
           <form
-            class='rounded-lg bg-white p-10 shadow-lg'
+            class='h-screen bg-white p-10 shadow-lg'
             onSubmit={handleSubmit}
           >
             <div class='mb-4 flex items-center'>
