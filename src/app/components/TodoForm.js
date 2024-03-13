@@ -19,11 +19,12 @@ export const TodoForm = ({ addTodo }) => {
   return (
     <div>
       {/* make input form to make new todo */}
-      <form class='h-screen bg-white p-10 shadow-lg' onSubmit={handleSubmit}>
+      <form class='p-10' onSubmit={handleSubmit}>
         <div class='mb-4 flex items-center'>
           <input
             type='text'
             class='w-full rounded-lg border border-gray-400 p-2'
+            value={value}
             placeholder='What needs to be done?'
             onChange={(e) => setValue(e.target.value)}
           />

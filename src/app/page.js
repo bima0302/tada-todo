@@ -7,7 +7,7 @@ import { TodoWrapper } from "./components/TodoWrapper";
 export default function Home() {
   return (
     <>
-      <div className='App'>
+      <div className='text-center'>
         {/* App */}
         <TodoWrapper />
       </div>
