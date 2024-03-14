@@ -17,10 +17,10 @@ export const TodoForm = ({ addTodo }) => {
     // console.log(value);
   };
   return (
-    <div>
+    <>
       {/* make input form to make new todo */}
       <form class='p-10' onSubmit={handleSubmit}>
-        <div class='mb-4 flex items-center'>
+        <div class='flex items-center'>
           <input
             type='text'
             class='w-full rounded-lg border border-gray-400 p-2'
@@ -33,6 +33,6 @@ export const TodoForm = ({ addTodo }) => {
           </button>
         </div>
       </form>
-    </div>
+    </>
   );
 };

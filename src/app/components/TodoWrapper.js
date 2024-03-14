@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Footer } from "../Footer";
+import React, { useState } from "react";
 import { Header } from "./Header";
+import { Footer } from "./Footer";
 import { TodoForm } from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 import { Todo } from "./Todo";
@@ -14,7 +14,6 @@ export const TodoWrapper = () => {
     setTodos([
       ...todos,
       { id: uuidv4(), task: todo, completed: false, isEditing: false },
-      console.log(todos),
     ]);
   };
   return (
@@ -24,9 +23,11 @@ export const TodoWrapper = () => {
         <Header />
         {/* body */}
         <TodoForm addTodo={addTodo} />
-        {/* <Todo /> */}
+        {todos.map((todo, index) => (
+          <Todo task={todo} key={index} />
+        ))}
         {/* footer */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
