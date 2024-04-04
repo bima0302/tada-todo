@@ -16,6 +16,15 @@ export const TodoWrapper = () => {
       { id: uuidv4(), task: todo, completed: false, isEditing: false },
     ]);
   };
+
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
   return (
     <div className=''>
       <div className='max-w-sm mx-auto bg-white'>
@@ -24,7 +33,7 @@ export const TodoWrapper = () => {
         {/* body */}
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => (
-          <Todo task={todo} key={index} />
+          <Todo task={todo} key={index} toggleComplete={toggleComplete} />
         ))}
         {/* footer */}
         {/* <Footer /> */}
