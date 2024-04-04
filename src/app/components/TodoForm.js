@@ -3,8 +3,6 @@ import React from "react";
 // Import useState from 'react' library
 import { useState } from "react";
 
-import { MdEventNote } from "react-icons/md";
-
 export const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState("");
 
@@ -14,7 +12,6 @@ export const TodoForm = ({ addTodo }) => {
       addTodo(value);
       setValue("");
     }
-    // console.log(value);
   };
   return (
     <>
@@ -29,7 +26,7 @@ export const TodoForm = ({ addTodo }) => {
             onChange={(e) => setValue(e.target.value)}
           />
           <button class='ml-2 rounded-lg bg-blue-500 p-2 text-white hover:bg-blue-600'>
-            <MdEventNote size={24} />
+            Add
           </button>
         </div>
       </form>

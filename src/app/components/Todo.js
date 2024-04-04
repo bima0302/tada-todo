@@ -1,7 +1,7 @@
 import React from "react";
 import { LuPenSquare, LuTrash } from "react-icons/lu";
 
-export const Todo = ({ task, toggleComplete, deleteTodo }) => {
+export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
   return (
     <div className='p-2 px-10'>
       <div className='flex justify-between items-center rounded-lg bg-blue-500 p-2 text-white hover:bg-blue-600'>
@@ -12,7 +12,7 @@ export const Todo = ({ task, toggleComplete, deleteTodo }) => {
           {task.task}
         </p>
         <div className='flex'>
-          <LuPenSquare />
+          <LuPenSquare onClick={() => editTodo(task.id)} />
           <LuTrash onClick={() => deleteTodo(task.id)} />
         </div>
       </div>
