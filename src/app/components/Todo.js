@@ -7,7 +7,7 @@ export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }) => {
       <div className='flex justify-between items-center rounded-lg bg-blue-500 p-2 text-white hover:bg-blue-600'>
         <p
           onClick={() => toggleComplete(task.id)}
-          className={`${task.completed ? "completed" : ""}`}
+          className={`${task.completed ? "completed" : "incompleted"}`}
         >
           {task.task}
         </p>
