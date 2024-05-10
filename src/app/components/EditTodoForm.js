@@ -8,7 +8,7 @@ export const EditTodoForm = ({ editTodo, task }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    editTodo(value, task.id);
+    editTodo(task.id, value);
   };
   return (
     <>
